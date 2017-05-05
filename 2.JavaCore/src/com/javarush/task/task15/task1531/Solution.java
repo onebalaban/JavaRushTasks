@@ -34,7 +34,6 @@ public class Solution {
                 fac = fac.multiply(BigDecimal.valueOf(n));
             }
             return fac.toString();
-
         }
     }
 }

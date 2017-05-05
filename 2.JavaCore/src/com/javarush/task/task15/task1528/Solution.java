@@ -17,7 +17,6 @@ public class Solution {
         }
     }
 
-    //add your code below - добавь код ниже
     public static class Hrivna extends Money {
         public double amount = 123d;
 

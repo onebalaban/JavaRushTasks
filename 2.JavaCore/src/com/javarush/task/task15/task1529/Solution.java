@@ -35,5 +35,6 @@ public class Solution {
             result = new Plane(Integer.parseInt(reader.readLine()));
         }
         reader.close();
+
     }
 }
