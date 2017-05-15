@@ -5,13 +5,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-/* 
+/*
 Закрепляем Singleton pattern
 */
 
 public class Solution {
     public static void main(String[] args) {
 
+    }
+
+    static{
+        readKeyFromConsoleAndInitPlanet();
     }
 
     public static Planet thePlanet;
@@ -27,19 +31,19 @@ public class Solution {
         }
 
 
-        if (s.equals(Planet.SUN)){
-            Solution.thePlanet = Sun.getInstance();
+        switch (s) {
+            case Planet.SUN:
+                Solution.thePlanet = Sun.getInstance();
+                break;
+            case Planet.MOON:
+                Solution.thePlanet = Moon.getInstance();
+                break;
+            case Planet.EARTH:
+                Solution.thePlanet = Earth.getInstance();
+                break;
+            default:
+                Solution.thePlanet = null;
+                break;
         }
-        else if (s.equals(Planet.MOON)){
-            Solution.thePlanet = Moon.getInstance();
-        }
-        else if (s.equals(Planet.EARTH)){
-            Solution.thePlanet = Earth.getInstance();
-        }
-        else Solution.thePlanet = null;
-    }
-
-    static{
-        readKeyFromConsoleAndInitPlanet();
     }
 }

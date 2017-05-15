@@ -13,8 +13,7 @@ public class Sun implements Planet{
 
     public static Sun getInstance(){
         if(instance == null){
-            instance = new Sun() {
-            };
+            instance = new Sun();
         }
         return instance;
     }
